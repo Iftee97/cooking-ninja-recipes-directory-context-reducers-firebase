@@ -39,11 +39,11 @@ function Recipe() {
     };
   }, [id]);
 
-  const handleClick = () => {
-    projectFirestore.collection("recipes").doc(id).update({
-      title: "something completely different",
-    });
-  };
+//   const handleClick = () => {
+//     projectFirestore.collection("recipes").doc(id).update({
+//       title: "something completely different",
+//     });
+//   };
 
   return (
     <div className={`recipe ${mode}`}>
@@ -59,7 +59,7 @@ function Recipe() {
             ))}
           </ul>
           <p className="method">{recipe.method}</p>
-          <button onClick={handleClick}>update recipe</button>
+//           <button onClick={handleClick}>update recipe</button>
         </>
       )}
     </div>
