@@ -13,35 +13,35 @@ import Recipe from "./pages/recipe/Recipe";
 import { useTheme } from "./hooks/useTheme";
 
 function App() {
-  const { mode } = useTheme();
+    const { mode } = useTheme();
 
-  return (
-    <div className={`App ${mode}`}>
-      <BrowserRouter>
-        <Navbar />
+    return (
+        <div className={`App ${mode}`}>
+            <BrowserRouter>
+                <Navbar />
 
-        <ThemeSelector />
+                <ThemeSelector />
 
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
+                <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
 
-          <Route path="/create">
-            <Create />
-          </Route>
+                    <Route path="/create">
+                        <Create />
+                    </Route>
 
-          <Route path="/search">
-            <Search />
-          </Route>
+                    <Route path="/search">
+                        <Search />
+                    </Route>
 
-          <Route path="/recipes/:id">
-            <Recipe />
-          </Route>
-        </Switch>
-      </BrowserRouter>
-    </div>
-  );
+                    <Route path="/recipes/:id">
+                        <Recipe />
+                    </Route>
+                </Switch>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
